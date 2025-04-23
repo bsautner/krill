@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="composeApp-desktop">
+    <output-path>$PROJECT_DIR$/KrillKontrol/composeApp/build/libs</output-path>
+    <root id="archive" name="composeApp-desktop.jar">
+      <element id="module-output" name="KrillKontrol.composeApp.desktopMain" />
+    </root>
+  </artifact>
+</component>
