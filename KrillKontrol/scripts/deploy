@@ -1,0 +1,4 @@
+cd ..
+./gradlew clean shadowJar
+scp /home/ben/Code/projects/krill/KrillKontrol/server/build/libs/server-all.jar 192.168.1.118:~
+cd scripts

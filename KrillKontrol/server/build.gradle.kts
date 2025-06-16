@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.kotlinJvm)
     alias(libs.plugins.ktor)
+
     application
 }
 
@@ -12,13 +13,13 @@ application {
 }
 kotlin {
     jvmToolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
-    jvmToolchain(17)
+    jvmToolchain(21)
 }
 
 tasks.withType<JavaCompile>().configureEach {
-    options.release.set(17)
+    options.release.set(21)
 }
 
 dependencies {
@@ -26,7 +27,9 @@ dependencies {
     implementation(libs.logback)
     implementation(libs.ktor.server.core)
     implementation(libs.ktor.server.netty)
-//    testImplementation(libs.ktor.server.tests)
+    implementation("com.pi4j:pi4j-core:3.0.1")
+    implementation("com.pi4j:pi4j-plugin-raspberrypi:3.0.1")
+    implementation("com.pi4j:pi4j-plugin-gpiod:3.0.1")
     testImplementation(libs.kotlin.test.junit)
     testImplementation(kotlin("test"))
     implementation(kotlin("stdlib-jdk8"))
