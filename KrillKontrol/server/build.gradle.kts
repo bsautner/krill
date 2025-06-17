@@ -30,6 +30,7 @@ dependencies {
     implementation("com.pi4j:pi4j-core:3.0.1")
     implementation("com.pi4j:pi4j-plugin-raspberrypi:3.0.1")
     implementation("com.pi4j:pi4j-plugin-gpiod:3.0.1")
+    implementation("io.ktor:ktor-server-default-headers:3.1.3")
     testImplementation(libs.kotlin.test.junit)
     testImplementation(kotlin("test"))
     implementation(kotlin("stdlib-jdk8"))

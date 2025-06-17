@@ -4,13 +4,17 @@ import com.pi4j.Pi4J
 import com.pi4j.io.gpio.digital.DigitalOutput
 import com.pi4j.io.gpio.digital.DigitalState
 import io.ktor.server.application.*
-import io.ktor.server.response.*
+import io.ktor.server.engine.*
+import io.ktor.server.http.content.*
+import io.ktor.server.netty.*
+import io.ktor.server.plugins.defaultheaders.*
 import io.ktor.server.routing.*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
+import java.io.File
 
 
-fun main() {
+fun mainpi() {
 
     var pi = Pi4J.newAutoContext()
     println(pi.boardInfo().boardModel.model.name)
@@ -45,12 +49,30 @@ fun main() {
     }
 
 }
-//    embeddedServer(Netty, port = SERVER_PORT, host = "pi-krill.local", module = Application::module)
-//        .start(wait = true)
+
+fun main() {
+
+    embeddedServer(Netty, port = SERVER_PORT, host = "0.0.0.0", module = Application::module)
+        .start(wait = true)
+}
 fun Application.module() {
+    install(DefaultHeaders) {
+    header("X-Engine", "Ktor") // will send this header with each response
+}
+
     routing {
-        get("/") {
-            call.respondText("Ktor: ${Greeting().greet()}")
+        staticResources("/", "static", index = "index.html")
+
+    }
+
+    environment.monitor.subscribe(ApplicationStarted) {
+        File("static").walkTopDown().forEach {
+            if (it.extension == "wasm") {
+                it.setExecutable(true)
+            }
         }
     }
+
+
+
 }

@@ -1,0 +1,21 @@
+#!/bin/bash
+set -e
+
+PROJECT_ROOT="/home/ben/Code/projects/krill/KrillKontrol"
+DIST_DIR="$PROJECT_ROOT/composeApp/build/dist/wasmJs/productionExecutable"
+COMPILE_DIR="$PROJECT_ROOT/composeApp/build/compileSync/wasmJs/main/productionExecutable/kotlin"
+STATIC_DIR="$PROJECT_ROOT/server/src/main/resources/static"
+
+cd ..
+
+# Step 1: Build
+./gradlew clean :composeApp:wasmJsBrowserDistribution
+
+# Step 2: Clean old static files
+rm -rf "$STATIC_DIR"
+
+
+
+# Step 4: Copy all output to static resources
+cp -rv "$DIST_DIR" "$PROJECT_ROOT/server/src/main/resources"
+mv -v "$PROJECT_ROOT/server/src/main/resources/productionExecutable" "$STATIC_DIR"
