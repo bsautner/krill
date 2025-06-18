@@ -8,7 +8,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import io.gihub.bsautner.client.MainViewModel
+import io.gihub.bsautner.krill.client.MainViewModel
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable

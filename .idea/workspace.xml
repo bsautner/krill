@@ -10,8 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fa41927-c99d-4763-8031-87c282bec61e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/KrillKontrol/server/src/main/kotlin/io/github/bsautner/krill/di/KrillServerModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KrillKontrol/server/src/main/kotlin/io/github/bsautner/krill/pi/PiManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/krill/client/KtorClient.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/krill/di/KrillModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/jvmMain/kotlin/io/gihub/bsautner/krill/client/KtorClientProvider.jvm.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/wasmJsMain/kotlin/io/gihub/bsautner/krill/client/KtorClientProvider.wasmJs.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/server/src/main/kotlin/org/example/project/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/server/src/main/kotlin/org/example/project/Application.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/commonMain/kotlin/client/KtorClient.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/commonMain/kotlin/org/example/project/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/commonMain/kotlin/io/github/bsautner/krill/App.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/desktopMain/kotlin/org/example/project/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/desktopMain/kotlin/io/github/bsautner/krill/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/wasmJsMain/kotlin/org/example/project/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/wasmJsMain/kotlin/io/github/bsautner/krill/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/server/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/server/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/server/src/main/kotlin/org/example/project/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/server/src/main/kotlin/io/github/bsautner/krill/Application.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/androidMain/kotlin/io/gihub/bsautner/client/KtorClientProvidor.android.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/androidMain/kotlin/io/gihub/bsautner/client/KtorClientProvidor.android.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/client/KrillClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/krill/client/KrillClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/client/KtorClientProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/krill/client/KtorClientProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/client/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/krill/client/MainViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/jvmMain/kotlin/io/gihub/bsautner/client/KtorClientProvider.jvm.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/wasmJsMain/kotlin/io/gihub/bsautner/client/KtorClientProvider.wasmJs.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +116,6 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
@@ -133,7 +152,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.web.browsers",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -147,11 +166,12 @@
       <recent name="$PROJECT_DIR$/KrillKontrol/shared/src" />
     </key>
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="io.github.bsautner.krill" />
       <recent name="io.gihub.bsautner.client" />
       <recent name="io.bsautner.github.krill.client.ktorclient" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.KrillKontrol [wasmJsBrowserDevelopmentRun]">
+  <component name="RunManager" selected="Ktor.ApplicationKt">
     <configuration name="KrillKontrol.composeApp" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="KrillKontrol.composeApp" />
       <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
@@ -435,13 +455,13 @@
       <method v="2" />
     </configuration>
     <configuration name="ApplicationKt" type="KtorApplicationConfigurationType" factoryName="Ktor" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.project.ApplicationKt" />
+      <option name="MAIN_CLASS_NAME" value="io.github.bsautner.krill.ApplicationKt" />
       <module name="KrillKontrol.server.main" />
       <target name="ben@pi-krill.local:22" />
       <option name="alternativeJrePath" />
       <option name="alternativeJrePathEnabled" value="false" />
       <option name="includeProvidedScope" value="false" />
-      <option name="mainClass" value="org.example.project.ApplicationKt" />
+      <option name="mainClass" value="io.github.bsautner.krill.ApplicationKt" />
       <option name="passParentEnvs" value="true" />
       <option name="programParameters" value="" />
       <option name="shortenCommandLine" />
@@ -503,11 +523,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.KrillKontrol [wasmJsBrowserDevelopmentRun]" />
         <item itemvalue="Gradle.main [desktop]" />
+        <item itemvalue="Gradle.KrillKontrol [wasmJsBrowserDistribution]" />
+        <item itemvalue="Gradle.KrillKontrol [wasmJsBrowserDevelopmentRun]" />
         <item itemvalue="Gradle.KtorClientProvider [jvm]" />
         <item itemvalue="Gradle.KrillKontrol [wasmJsBrowserProductionRun]" />
-        <item itemvalue="Gradle.KrillKontrol [wasmJsBrowserDistribution]" />
       </list>
     </recent_temporary>
   </component>
@@ -582,7 +602,7 @@
       <workItem from="1750185376658" duration="53000" />
       <workItem from="1750185603674" duration="27000" />
       <workItem from="1750185637731" duration="5252000" />
-      <workItem from="1750248948773" duration="8098000" />
+      <workItem from="1750248948773" duration="16193000" />
     </task>
     <servers />
   </component>

@@ -41,6 +41,9 @@ kotlin {
         commonMain.dependencies {
            implementation(libs.bundles.ktorClient)
            implementation(libs.kotlinx.coroutines)
+           implementation(libs.bundles.koin)
+
+
         }
         jvmMain.dependencies {
             implementation(libs.bundles.ktorClientJvm)
@@ -52,7 +55,7 @@ kotlin {
 }
 
 android {
-    namespace = "org.example.project.shared"
+    namespace = "io.github.bsautner.krill.shared"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -62,6 +65,4 @@ android {
         minSdk = libs.versions.android.minSdk.get().toInt()
     }
 }
-dependencies {
-    implementation("io.ktor:ktor-client-cio-jvm:3.1.3")
-}
+

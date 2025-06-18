@@ -1,4 +1,4 @@
-package io.gihub.bsautner.client
+package io.gihub.bsautner.krill.client
 
 import io.ktor.client.*
 import io.ktor.client.request.*

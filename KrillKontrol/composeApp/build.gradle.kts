@@ -50,7 +50,9 @@ kotlin {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
         }
+
         commonMain.dependencies {
+
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
@@ -62,7 +64,9 @@ kotlin {
             implementation(projects.shared)
             implementation(libs.bundles.ktorClient)
             implementation(libs.kotlinx.coroutines)
+            implementation(libs.bundles.koin)
         }
+
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutines.swing)
@@ -109,11 +113,11 @@ dependencies {
 
 compose.desktop {
     application {
-        mainClass = "org.example.project.MainKt"
+        mainClass = "io.github.bsautner.krill.MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "org.example.project"
+            packageName = "io.github.bsautner.krill"
             packageVersion = "1.0.0"
         }
     }
