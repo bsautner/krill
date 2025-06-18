@@ -15,7 +15,7 @@ class DefaultKrillClient(private val client: HttpClient
 
 
     override suspend fun testGet() :String {
-        val response: HttpResponse = client.request("http://0.0.0.0:8080/test") {
+        val response: HttpResponse = client.request("http://pi-krill.local:8080/test") {
             method = HttpMethod.Get
         }
         return response.bodyAsText()

@@ -1,6 +1,7 @@
 package org.example.project
 
 import com.pi4j.Pi4J
+import com.pi4j.context.Context
 import com.pi4j.io.gpio.digital.DigitalOutput
 import com.pi4j.io.gpio.digital.DigitalState
 import io.ktor.http.*
@@ -72,6 +73,8 @@ fun Application.module() {
         route("/test", HttpMethod.Get) {
 
             handle {
+                val t = Toggle()
+                t.test()
                 call.respondText("Hello World!")
             }
 
@@ -79,4 +82,53 @@ fun Application.module() {
 
     }
 
+}
+
+object PiContextProvider  {
+    private lateinit var pi : Context
+    private lateinit var bcm16: DigitalOutput
+
+    fun getContext() : Context {
+        if (! ::pi.isInitialized) {
+            pi = Pi4J.newAutoContext()
+        }
+        return pi
+    }
+
+    fun getPin() : DigitalOutput {
+        if (! ::bcm16.isInitialized) {
+            bcm16 = pi.create(DigitalOutput.newConfigBuilder(pi)
+                .id("BCM16")
+                .name("LED #16")
+                .address(16)
+                // .provider(pi.providers().digitalOutput())
+                .shutdown(DigitalState.LOW)
+                .initial(DigitalState.LOW)
+            )
+        }
+        return bcm16
+
+    }
+
+}
+
+class Toggle() {
+
+    fun test() {
+        val pi = PiContextProvider.getContext()
+        println(pi.boardInfo().boardModel.model.name)
+
+        println(pi.providers().digitalOutput().toString())
+
+        val ledOutput = PiContextProvider.getPin()
+
+                if (ledOutput.isLow) {
+                    ledOutput.high()
+                } else {
+                    ledOutput.low()
+                }
+
+
+
+    }
 }
