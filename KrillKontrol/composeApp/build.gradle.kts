@@ -97,9 +97,9 @@ kotlin {
             dependsOn(commonMain)
             // any iOS-only Kotlin libs here
         }
-//        getByName("iosX64Main").dependsOn(iosMain)
-//        getByName("iosSimulatorArm64Main").dependsOn(iosMain)
-//        getByName("iosArm64Main").dependsOn(iosMain)
+        getByName("iosX64Main").dependsOn(iosMain)
+        getByName("iosSimulatorArm64Main").dependsOn(iosMain)
+        getByName("iosArm64Main").dependsOn(iosMain)
 
 
 
