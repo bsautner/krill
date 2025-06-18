@@ -28,11 +28,14 @@ kotlin {
         iosArm64(),
         iosSimulatorArm64()
     ).forEach { iosTarget ->
+
         iosTarget.binaries.framework {
-            baseName = "composeApp"
+            baseName = "ComposeApp"
             isStatic = true
+
         }
     }
+
 
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
@@ -88,6 +91,15 @@ kotlin {
                 implementation(libs.kotlinx.coroutines.swing)
             }
         }
+
+        val iosMain by creating {
+            dependsOn(commonMain)
+            // any iOS-only Kotlin libs here
+        }
+        getByName("iosX64Main").dependsOn(iosMain)
+        getByName("iosSimulatorArm64Main").dependsOn(iosMain)
+        getByName("iosArm64Main").dependsOn(iosMain)
+
 
 
 
