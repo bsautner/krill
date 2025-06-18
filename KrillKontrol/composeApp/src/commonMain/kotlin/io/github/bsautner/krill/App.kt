@@ -35,3 +35,26 @@ fun App(viewModel: KrillViewModel) {
 
     }
 }
+
+
+@Composable
+@Preview
+fun AppIos() {
+
+    MaterialTheme {
+        Box(
+            modifier = Modifier.padding(45.dp),
+        ) {
+            Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
+                Button(onClick = {
+                    println("ios onButtonClick 1")
+
+                }) {
+                    Text("Hello iOS")
+                }
+
+            }
+        }
+
+    }
+}

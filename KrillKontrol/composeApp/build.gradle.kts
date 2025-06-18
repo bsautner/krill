@@ -23,6 +23,17 @@ kotlin {
     
     jvm("desktop")
 
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach { iosTarget ->
+        iosTarget.binaries.framework {
+            baseName = "composeApp"
+            isStatic = true
+        }
+    }
+
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         moduleName = "composeApp"
@@ -44,40 +55,42 @@ kotlin {
     }
     
     sourceSets {
-        val desktopMain by getting
-        
-        androidMain.dependencies {
-            implementation(compose.preview)
-            implementation(libs.androidx.activity.compose)
-            implementation(libs.bundles.koin.android)
-        }
 
-        commonMain.dependencies {
-
-            implementation(compose.runtime)
-            implementation(compose.foundation)
-            implementation(compose.material)
-            implementation(compose.ui)
-            implementation(compose.components.resources)
-            implementation(compose.components.uiToolingPreview)
-            implementation(libs.androidx.lifecycle.viewmodel)
-            implementation(libs.androidx.lifecycle.runtime.compose)
-            implementation(projects.shared)
-            implementation(libs.bundles.ktorClient)
-            implementation(libs.kotlinx.coroutines)
-            implementation(libs.bundles.koin)
-        }
-
-        desktopMain.dependencies {
-            implementation(compose.desktop.currentOs)
-            implementation(libs.kotlinx.coroutines.swing)
-        }
-
-        sourceSets {
-            commonMain.dependencies {
-
+        val androidMain by getting {
+            dependencies {
+                implementation(compose.preview)
+                implementation(libs.androidx.activity.compose)
+                implementation(libs.bundles.koin.android)
             }
         }
+
+        val commonMain by getting {
+            dependencies {
+
+                implementation(compose.runtime)
+                implementation(compose.foundation)
+                implementation(compose.material)
+                implementation(compose.ui)
+                implementation(compose.components.resources)
+                implementation(compose.components.uiToolingPreview)
+                implementation(libs.androidx.lifecycle.viewmodel)
+                implementation(libs.androidx.lifecycle.runtime.compose)
+                implementation(projects.shared)
+                implementation(libs.bundles.ktorClient)
+                implementation(libs.kotlinx.coroutines)
+                implementation(libs.bundles.koin)
+            }
+        }
+
+        val desktopMain  by getting {
+            dependencies {
+                implementation(compose.desktop.currentOs)
+                implementation(libs.kotlinx.coroutines.swing)
+            }
+        }
+
+
+
     }
 }
 
@@ -123,7 +136,6 @@ compose.desktop {
         }
     }
 }
-
 
 tasks.withType<org.jetbrains.kotlin.gradle.targets.js.binaryen.BinaryenExec> {
     binaryenArgs = mutableListOf(
