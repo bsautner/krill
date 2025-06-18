@@ -51,6 +51,9 @@ kotlin {
         wasmJsMain.dependencies {
             implementation(libs.bundles.ktorClientJs)
         }
+        androidMain.dependencies {
+            implementation(libs.bundles.ktorClientAndroid)
+        }
     }
 }
 

@@ -11,11 +11,14 @@ val krillModule = module {
     single<HttpClient>  { getHttpClient().client }
     single<KrillClient> { DefaultKrillClient(get()) }
     single { TestGetUseCase(get()) }
-    single { MainViewModel(get()) }
+    single<KrillViewModel> { MainViewModel(get()) }
 
-  //  viewModelOf(::MainViewModel)
+}
+
+val appModule = module {
+
 }
 
 fun initKoin(): Koin = startKoin {
-    modules(krillModule)
+    modules(listOf(krillModule,  appModule))
 }.koin

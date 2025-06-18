@@ -30,6 +30,7 @@ pi4j-plugin-gpiod = { group = "com.pi4j", name = "pi4j-plugin-gpiod", version.re
 
 koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin"}
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin"}
+koin-android-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin"}
 
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
@@ -62,7 +63,7 @@ ktor-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", versi
 ktor-common = { group = "io.ktor", name = "ktor-server-host-common", version.ref = "ktor"}
 
 
-
+ktor-client-android = { group = "io.ktor", name = "ktor-client-android" , version.ref = "ktor" }
 ktor-client-core = { group = "io.ktor", name = "ktor-client-core" , version.ref = "ktor" }
 ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation" , version.ref = "ktor" }
 ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging" , version.ref = "ktor" }
@@ -88,5 +89,7 @@ ktorServer = ["ktor-server-netty", "kotlinx-serialization", "ktor-server-core", 
 ktorClient = ["ktor-client-core", "kotlinx-serialization", "ktor-json", "ktor-client-content-negotiation"]
 ktorClientJs = ["ktor-client-js"]
 ktorClientJvm = ["ktor-client-cio"]
+ktorClientAndroid = ["ktor-client-android"]
 pi4j = ["pi4j-core", "pi4j-plugin-raspberrypi", "pi4j-plugin-gpiod"]
 koin = ["koin-core"]
+koin-android = ["koin-android-compose"]

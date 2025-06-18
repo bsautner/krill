@@ -10,28 +10,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fa41927-c99d-4763-8031-87c282bec61e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/server/src/main/kotlin/io/github/bsautner/krill/di/KrillServerModule.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/server/src/main/kotlin/io/github/bsautner/krill/pi/PiManager.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/krill/client/KtorClient.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/krill/di/KrillModule.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/jvmMain/kotlin/io/gihub/bsautner/krill/client/KtorClientProvider.jvm.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/wasmJsMain/kotlin/io/gihub/bsautner/krill/client/KtorClientProvider.wasmJs.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/androidMain/kotlin/org/example/project/KrillApplication.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/androidMain/kotlin/org/example/project/MainAndroidViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/androidMain/kotlin/org/example/project/di/AndroidModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/androidMain/res/xml/network_security_config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/composeApp/KrillKontrol.composeApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/composeApp/KrillKontrol.composeApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/commonMain/kotlin/client/KtorClient.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/commonMain/kotlin/org/example/project/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/commonMain/kotlin/io/github/bsautner/krill/App.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/desktopMain/kotlin/org/example/project/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/desktopMain/kotlin/io/github/bsautner/krill/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/wasmJsMain/kotlin/org/example/project/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/wasmJsMain/kotlin/io/github/bsautner/krill/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/androidMain/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/androidMain/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/androidMain/kotlin/org/example/project/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/androidMain/kotlin/org/example/project/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/commonMain/kotlin/io/github/bsautner/krill/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/commonMain/kotlin/io/github/bsautner/krill/App.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/desktopMain/kotlin/io/github/bsautner/krill/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/desktopMain/kotlin/io/github/bsautner/krill/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/wasmJsMain/kotlin/io/github/bsautner/krill/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/wasmJsMain/kotlin/io/github/bsautner/krill/main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrillKontrol/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/server/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/server/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/server/src/main/kotlin/org/example/project/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/server/src/main/kotlin/io/github/bsautner/krill/Application.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/androidMain/kotlin/io/gihub/bsautner/client/KtorClientProvidor.android.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/androidMain/kotlin/io/gihub/bsautner/client/KtorClientProvidor.android.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/client/KrillClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/krill/client/KrillClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/client/KtorClientProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/krill/client/KtorClientProvider.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/client/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/krill/client/MainViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/jvmMain/kotlin/io/gihub/bsautner/client/KtorClientProvider.jvm.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/wasmJsMain/kotlin/io/gihub/bsautner/client/KtorClientProvider.wasmJs.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/androidMain/kotlin/io/gihub/bsautner/client/KtorClientProvidor.android.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/androidMain/kotlin/io/gihub/bsautner/krill/client/KtorClientProvidor.android.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/krill/client/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/krill/client/MainViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/krill/di/KrillModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/gihub/bsautner/krill/di/KrillModule.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +36,7 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=29071FDH300KV4)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/KrillKontrol">
       <ProjectState />
@@ -69,23 +64,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="KrillKontrol" type="f1a62948:ProjectNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="KrillKontrol" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="KrillKontrol" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="kotlin browser" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="KrillKontrol" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -99,6 +77,7 @@
         <option value="Kotlin Object" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -121,6 +100,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Android App.MainActivity.executor": "Run",
     "Embedded Linux JVM.pi.executor": "Run",
     "Gradle.Build KrillKontrol.executor": "Run",
     "Gradle.Download Sources.executor": "Run",
@@ -152,7 +132,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.sourceCode.XML",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -171,7 +151,7 @@
       <recent name="io.bsautner.github.krill.client.ktorclient" />
     </key>
   </component>
-  <component name="RunManager" selected="Ktor.ApplicationKt">
+  <component name="RunManager" selected="Android App.MainActivity">
     <configuration name="KrillKontrol.composeApp" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="KrillKontrol.composeApp" />
       <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
@@ -344,6 +324,49 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainActivity" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false" singleton="true" temporary="true">
+      <module name="KrillKontrol.composeApp" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="specific_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
+      <option name="CLEAR_LOGCAT" value="true" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
+      <option name="ACTIVITY_CLASS" value="org.example.project.MainActivity" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KrillKontrol [wasmJsBrowserDevelopmentRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -378,28 +401,6 @@
         <option name="taskNames">
           <list>
             <option value="wasmJsBrowserDistribution" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="KrillKontrol [wasmJsBrowserProductionRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/KrillKontrol" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="wasmJsBrowserProductionRun" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -463,7 +464,7 @@
       <option name="includeProvidedScope" value="false" />
       <option name="mainClass" value="io.github.bsautner.krill.ApplicationKt" />
       <option name="passParentEnvs" value="true" />
-      <option name="programParameters" value="" />
+      <option name="programParameters" />
       <option name="shortenCommandLine" />
       <option name="vmParameters" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
@@ -513,21 +514,21 @@
       <item itemvalue="Android App.KrillKontrol.composeApp.androidTest" />
       <item itemvalue="Android App.KrillKontrol.composeApp.main" />
       <item itemvalue="Android App.KrillKontrol.composeApp.unitTest" />
+      <item itemvalue="Android App.MainActivity" />
       <item itemvalue="Embedded Linux JVM.pi" />
       <item itemvalue="Gradle.main [desktop]" />
       <item itemvalue="Gradle.KtorClientProvider [jvm]" />
       <item itemvalue="Gradle.KrillKontrol [wasmJsBrowserDevelopmentRun]" />
       <item itemvalue="Gradle.KrillKontrol [wasmJsBrowserDistribution]" />
-      <item itemvalue="Gradle.KrillKontrol [wasmJsBrowserProductionRun]" />
       <item itemvalue="Ktor.ApplicationKt" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.main [desktop]" />
+        <item itemvalue="Android App.MainActivity" />
         <item itemvalue="Gradle.KrillKontrol [wasmJsBrowserDistribution]" />
         <item itemvalue="Gradle.KrillKontrol [wasmJsBrowserDevelopmentRun]" />
+        <item itemvalue="Gradle.main [desktop]" />
         <item itemvalue="Gradle.KtorClientProvider [jvm]" />
-        <item itemvalue="Gradle.KrillKontrol [wasmJsBrowserProductionRun]" />
       </list>
     </recent_temporary>
   </component>
@@ -602,7 +603,10 @@
       <workItem from="1750185376658" duration="53000" />
       <workItem from="1750185603674" duration="27000" />
       <workItem from="1750185637731" duration="5252000" />
-      <workItem from="1750248948773" duration="16193000" />
+      <workItem from="1750248948773" duration="16655000" />
+      <workItem from="1750265707116" duration="63000" />
+      <workItem from="1750265777516" duration="1769000" />
+      <workItem from="1750267556201" duration="3042000" />
     </task>
     <servers />
   </component>
