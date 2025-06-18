@@ -105,6 +105,32 @@ kotlin {
 
 
     }
+
+    tasks.register<Exec>("assembleXCFramework") {
+        group = "build"
+        description = "Assembles a universal XCFramework for ComposeApp"
+
+        dependsOn(
+            "linkDebugFrameworkIosArm64",
+            "linkDebugFrameworkIosSimulatorArm64"
+        )
+
+        val outputDir = buildDir.resolve("XCFrameworks/ComposeApp")
+        val arm64Framework = buildDir.resolve("bin/iosArm64/debugFramework/ComposeApp.framework")
+        val simArm64Framework = buildDir.resolve("bin/iosSimulatorArm64/debugFramework/ComposeApp.framework")
+
+        doFirst {
+            outputDir.deleteRecursively()
+            outputDir.mkdirs()
+        }
+
+        commandLine(
+            "xcodebuild", "-create-xcframework",
+            "-framework", arm64Framework.absolutePath,
+            "-framework", simArm64Framework.absolutePath,
+            "-output", outputDir.resolve("ComposeApp.xcframework").absolutePath
+        )
+    }
 }
 
 android {
