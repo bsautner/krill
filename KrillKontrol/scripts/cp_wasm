@@ -8,7 +8,7 @@ STATIC_DIR="$PROJECT_ROOT/server/src/main/resources/static"
 
 cd ..
 
-# Step 1: Build
+./gradlew kotlinUpgradeYarnLock
 ./gradlew clean :composeApp:wasmJsBrowserDistribution
 
 # Step 2: Clean old static files

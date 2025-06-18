@@ -25,8 +25,8 @@ tasks.withType<JavaCompile>().configureEach {
 dependencies {
     implementation(projects.shared)
     implementation(libs.logback)
-    implementation(libs.ktor.server.core)
-    implementation(libs.ktor.server.netty)
+    implementation(libs.bundles.ktorServer)
+
     implementation("com.pi4j:pi4j-core:3.0.1")
     implementation("com.pi4j:pi4j-plugin-raspberrypi:3.0.1")
     implementation("com.pi4j:pi4j-plugin-gpiod:3.0.1")

@@ -3,15 +3,17 @@ package org.example.project
 import com.pi4j.Pi4J
 import com.pi4j.io.gpio.digital.DigitalOutput
 import com.pi4j.io.gpio.digital.DigitalState
+import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
 import io.ktor.server.http.content.*
 import io.ktor.server.netty.*
+import io.ktor.server.plugins.cors.routing.*
 import io.ktor.server.plugins.defaultheaders.*
+import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
-import java.io.File
 
 
 fun mainpi() {
@@ -52,27 +54,29 @@ fun mainpi() {
 
 fun main() {
 
-    embeddedServer(Netty, port = SERVER_PORT, host = "0.0.0.0", module = Application::module)
+    embeddedServer(Netty, port = 8080, host = "0.0.0.0", module = Application::module)
         .start(wait = true)
 }
 fun Application.module() {
+
     install(DefaultHeaders) {
-    header("X-Engine", "Ktor") // will send this header with each response
-}
+        header("X-Engine", "Ktor")
+    }
+    install(CORS) {
+        anyHost()
+    }
 
     routing {
-        staticResources("/", "static", index = "index.html")
+        staticResources("/static", "static", index = "index.html")
 
-    }
+        route("/test", HttpMethod.Get) {
 
-    environment.monitor.subscribe(ApplicationStarted) {
-        File("static").walkTopDown().forEach {
-            if (it.extension == "wasm") {
-                it.setExecutable(true)
+            handle {
+                call.respondText("Hello World!")
             }
+
         }
+
     }
-
-
 
 }

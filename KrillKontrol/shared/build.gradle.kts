@@ -6,6 +6,7 @@ import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.serialization)
 }
 
 kotlin {
@@ -38,7 +39,14 @@ kotlin {
     
     sourceSets {
         commonMain.dependencies {
-            // put your Multiplatform dependencies here
+           implementation(libs.bundles.ktorClient)
+           implementation(libs.kotlinx.coroutines)
+        }
+        jvmMain.dependencies {
+            implementation(libs.bundles.ktorClientJvm)
+        }
+        wasmJsMain.dependencies {
+            implementation(libs.bundles.ktorClientJs)
         }
     }
 }
@@ -53,4 +61,7 @@ android {
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
     }
+}
+dependencies {
+    implementation("io.ktor:ktor-client-cio-jvm:3.1.3")
 }

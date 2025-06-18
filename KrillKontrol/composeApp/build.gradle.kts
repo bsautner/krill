@@ -1,3 +1,4 @@
+
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
@@ -9,6 +10,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.serialization)
 }
 
 kotlin {
@@ -58,10 +60,18 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation(projects.shared)
+            implementation(libs.bundles.ktorClient)
+            implementation(libs.kotlinx.coroutines)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutines.swing)
+        }
+
+        sourceSets {
+            commonMain.dependencies {
+
+            }
         }
     }
 }
@@ -107,4 +117,24 @@ compose.desktop {
             packageVersion = "1.0.0"
         }
     }
+}
+
+
+tasks.withType<org.jetbrains.kotlin.gradle.targets.js.binaryen.BinaryenExec> {
+    binaryenArgs = mutableListOf(
+        // Required flags:
+        "--enable-gc",
+        "--enable-reference-types",
+        "--enable-exception-handling",
+        "--enable-bulk-memory",
+        "--enable-nontrapping-float-to-int",
+
+        // Optional flags (can be removed):
+        "--inline-functions-with-loops",
+        "--traps-never-happen",
+        "--fast-math",
+        "--gufa",
+        "-O3",
+        "-Oz",
+    )
 }
