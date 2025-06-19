@@ -1,8 +1,12 @@
 package io.github.bsautner.krill
 
 import androidx.compose.ui.window.ComposeUIViewController
-import org.example.project.AppIos
+import io.github.bsautner.krill.client.KrillViewModel
+import io.github.bsautner.krill.di.initKoin
+import org.example.project.App
 
-fun MainViewController() = ComposeUIViewController { AppIos() }
+val koin = initKoin()
+val vm: KrillViewModel = koin.get()
+fun MainViewController() = ComposeUIViewController { App(vm) }
 
 

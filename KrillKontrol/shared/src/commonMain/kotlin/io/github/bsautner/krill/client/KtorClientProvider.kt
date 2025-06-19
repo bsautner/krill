@@ -16,3 +16,4 @@ val myJson = Json {
      prettyPrint = false
      isLenient = true
 }
+

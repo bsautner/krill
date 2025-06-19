@@ -49,21 +49,43 @@ kotlin {
     }
     
     sourceSets {
-        commonMain.dependencies {
-           implementation(libs.bundles.ktorClient)
-           implementation(libs.kotlinx.coroutines)
-           implementation(libs.bundles.koin)
+        commonMain  {
+            dependencies {
+                implementation(libs.bundles.ktorClient)
+                implementation(libs.kotlinx.coroutines)
+                implementation(libs.bundles.koin)
 
-
+            }
         }
-        jvmMain.dependencies {
-            implementation(libs.bundles.ktorClientJvm)
+         jvmMain {
+            dependencies {
+                implementation(libs.bundles.ktorClientJvm)
+            }
         }
-        wasmJsMain.dependencies {
-            implementation(libs.bundles.ktorClientJs)
+         wasmJsMain {
+            dependencies {
+                implementation(libs.bundles.ktorClientJs)
+            }
         }
-        androidMain.dependencies {
-            implementation(libs.bundles.ktorClientAndroid)
+         androidMain {
+            dependencies {
+                implementation(libs.bundles.ktorClientAndroid)
+            }
+        }
+        iosArm64Main {
+            dependencies {
+                implementation(libs.ktor.client.darwin)
+            }
+        }
+        iosX64Main {
+            dependencies {
+                implementation(libs.ktor.client.darwin)
+            }
+        }
+        iosSimulatorArm64Main {
+            dependencies {
+                implementation(libs.ktor.client.darwin)
+            }
         }
     }
 }
