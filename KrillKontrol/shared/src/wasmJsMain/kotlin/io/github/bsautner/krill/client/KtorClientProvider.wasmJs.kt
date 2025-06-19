@@ -1,4 +1,4 @@
-package io.gihub.bsautner.krill.client
+package io.github.bsautner.krill.client
 
 import io.ktor.client.*
 import io.ktor.client.engine.js.*

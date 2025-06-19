@@ -1,7 +1,7 @@
 package org.example.project
 
 import android.app.Application
-import io.gihub.bsautner.krill.di.krillModule
+import io.github.bsautner.krill.di.krillModule
 import org.example.project.di.androidModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin

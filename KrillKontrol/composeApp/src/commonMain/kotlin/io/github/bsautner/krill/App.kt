@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import io.gihub.bsautner.krill.client.KrillViewModel
+import io.github.bsautner.krill.client.KrillViewModel
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable

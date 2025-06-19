@@ -2,8 +2,8 @@ package org.example.project
 
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.window.ComposeViewport
-import io.gihub.bsautner.krill.client.KrillViewModel
-import io.gihub.bsautner.krill.di.initKoin
+import io.github.bsautner.krill.client.KrillViewModel
+import io.github.bsautner.krill.di.initKoin
 import kotlinx.browser.document
 
 @OptIn(ExperimentalComposeUiApi::class)

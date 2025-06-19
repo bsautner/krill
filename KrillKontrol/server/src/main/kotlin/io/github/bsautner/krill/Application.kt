@@ -1,6 +1,6 @@
 package io.github.bsautner.krill
 
-import io.gihub.bsautner.krill.client.myJson
+import io.github.bsautner.krill.client.myJson
 import io.github.bsautner.krill.di.krillServerModule
 import io.github.bsautner.krill.pi.PiManager
 import io.ktor.http.*
