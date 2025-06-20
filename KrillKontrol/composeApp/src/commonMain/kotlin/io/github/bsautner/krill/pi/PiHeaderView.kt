@@ -2,29 +2,35 @@ package io.github.bsautner.krill.pi
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import io.github.bsautner.krill.client.KrillOperations
 import io.github.bsautner.krill.client.myJson
+import kotlinx.coroutines.launch
+import org.example.project.MockViewModel
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 
 @Composable
 fun PiHeaderView(
+    vm: KrillOperations,
     modifier: Modifier = Modifier,
     pins: List<GpioPin>,
 
 ) {
     Box(modifier) {
       Text(text = "PiHeaderView 3 ${pins == null}")
-        RaspberryPiHeader(pins)
+        RaspberryPiHeader(vm,pins)
     }
 }
 
@@ -32,14 +38,14 @@ fun PiHeaderView(
 @Composable
 private fun PreviewPiHeaderView() {
     val pins = myJson.decodeFromString<List<GpioPin>>(headerJson)
-
-    PiHeaderView(modifier = Modifier.fillMaxSize(), pins = pins)
+    val vm = MockViewModel()
+    PiHeaderView(modifier = Modifier.fillMaxSize(), vm = vm, pins =  pins)
 }
 
 @Composable
-fun GpioPinView(pin: GpioPin) {
+fun GpioPinView(vm: KrillOperations,  pin: GpioPin) {
    // val state = remember { mutableStateOf(pin.initialState) }
-
+    val scope = rememberCoroutineScope()
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
@@ -55,6 +61,11 @@ fun GpioPinView(pin: GpioPin) {
                     else if (pin.state == "HIGH") Color.Green else Color.Red
                 )
                 .border(1.dp, Color.Black, CircleShape)
+                .clickable(enabled = true, onClick = {
+                   scope.launch {
+                       vm.testGet()
+                   }
+                })
         ) {
             Text(
                 modifier = Modifier.align(Alignment.Center),
@@ -74,17 +85,17 @@ fun GpioPinView(pin: GpioPin) {
 
 
 @Composable
-fun RaspberryPiHeader(pins: List<GpioPin>) {
+fun RaspberryPiHeader(vm: KrillOperations, pins: List<GpioPin>) {
     Row(modifier = Modifier.padding(8.dp)) {
         Column {
             pins.filterIndexed { index, _ -> index % 2 == 0 }.forEach { pin ->
-                GpioPinView(pin)
+                GpioPinView(vm, pin)
             }
         }
         Spacer(modifier = Modifier.width(2.dp))
         Column {
             pins.filterIndexed { index, _ -> index % 2 == 1 }.forEach { pin ->
-                GpioPinView(pin)
+                GpioPinView(vm, pin)
             }
         }
     }

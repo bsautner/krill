@@ -1,9 +1,7 @@
 package org.example.project
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -12,18 +10,19 @@ import io.github.bsautner.krill.client.KrillOperations
 import io.github.bsautner.krill.pi.GpioPin
 import io.github.bsautner.krill.pi.RaspberryPiHeader
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.launch
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
+
+
 @Composable
-fun App(viewModel: KrillOperations) {
+fun App(vm: KrillOperations) {
     println("loading app")
     val scope = rememberCoroutineScope()
 
-    val pins by viewModel.pins.collectAsState()
+    val pins by vm.pins.collectAsState()
 
     LaunchedEffect(Unit) {
-        viewModel.start {}
+        vm.start {}
     }
     MaterialTheme {
         Box(
@@ -34,17 +33,7 @@ fun App(viewModel: KrillOperations) {
                 modifier = Modifier
             ) {
                 Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-                    Button(onClick = {
-                        println("onButtonClick 1")
-                        scope.launch {
-                            viewModel.testGet()
-                        }
-
-                    }) {
-                        Text("Hello World 2 ${pins.size}")
-                    }
-                    RaspberryPiHeader(pins)
-
+                       RaspberryPiHeader(vm, pins)
                 }
 
             }

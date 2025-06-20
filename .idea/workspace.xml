@@ -10,16 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fa41927-c99d-4763-8031-87c282bec61e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/client/KrillOperations.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/composeApp/KrillKontrol.composeApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/composeApp/KrillKontrol.composeApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/androidMain/kotlin/org/example/project/MainAndroidViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/androidMain/kotlin/org/example/project/MainAndroidViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/androidMain/kotlin/org/example/project/di/AndroidModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/androidMain/kotlin/org/example/project/di/AndroidModule.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/commonMain/kotlin/io/github/bsautner/krill/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/commonMain/kotlin/io/github/bsautner/krill/App.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/desktopMain/kotlin/io/github/bsautner/krill/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/desktopMain/kotlin/io/github/bsautner/krill/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/client/KrillClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/client/KrillClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/client/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/client/MainViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/di/KrillModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/di/KrillModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/commonMain/kotlin/io/github/bsautner/krill/pi/PiHeaderView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/commonMain/kotlin/io/github/bsautner/krill/pi/PiHeaderView.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -641,7 +633,7 @@
       <workItem from="1750265777516" duration="1769000" />
       <workItem from="1750267556201" duration="3042000" />
       <workItem from="1750421454725" duration="6404000" />
-      <workItem from="1750429650117" duration="17309000" />
+      <workItem from="1750429650117" duration="17909000" />
     </task>
     <servers />
   </component>
