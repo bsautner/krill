@@ -12,25 +12,20 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
-interface KrillClient {
-    suspend fun testGet() : String
-    suspend fun start(callback : suspend (GpioPin) -> Unit)
-}
 
-class DefaultKrillClient(private val client: HttpClient
-
-) : KrillClient  {
+class DefaultKrillClient(private val client: HttpClient)   {
     private val host = "pi-krill.local"
     private var session: WebSocketSession? = null
     private var listenJob: Job? = null
 
-    override suspend fun testGet() :String {
+    suspend fun testGet() :String {
         val response: HttpResponse = client.request("http://$host:8080/test") {
             method = HttpMethod.Get
         }
         return response.bodyAsText()
     }
-    override suspend fun start(callback : suspend (GpioPin) -> Unit) {
+
+     fun start(callback : suspend (GpioPin) -> Unit) {
         if (listenJob?.isActive == true) return
 
         listenJob = CoroutineScope(Dispatchers.Default).launch {
@@ -42,6 +37,7 @@ class DefaultKrillClient(private val client: HttpClient
             }
         }
     }
+
     suspend fun connectAndListen(callback : suspend (GpioPin) -> Unit) {
         client.webSocket("ws://$host:8080/ws/pin_events") {
             println("WebSocket connected.")
