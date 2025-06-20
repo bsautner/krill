@@ -8,10 +8,10 @@ import kotlinx.coroutines.flow.StateFlow
 
 class MainAndroidViewModel(private val mainViewModel: MainViewModel):  ViewModel(), KrillViewModel {
     override val pins: StateFlow<List<GpioPin>>
-        get() = TODO("Not yet implemented")
+        get() = mainViewModel.pins
 
     override suspend fun getPinStatus(): List<GpioPin> {
-        TODO("Not yet implemented")
+        return mainViewModel.getPinStatus()
     }
 
     override suspend fun onButtonClick() {
@@ -19,7 +19,7 @@ class MainAndroidViewModel(private val mainViewModel: MainViewModel):  ViewModel
     }
 
     override suspend fun start() {
-        TODO("Not yet implemented")
+       mainViewModel.start()
     }
 
 

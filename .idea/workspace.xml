@@ -10,37 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fa41927-c99d-4763-8031-87c282bec61e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/commonMain/kotlin/io/github/bsautner/krill/pi/PiHeaderView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/scripts/package_server_deb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/server/package.deb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/server/package/DEBIAN/control" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/server/package/DEBIAN/postinst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/server/package/DEBIAN/postrm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/server/package/DEBIAN/prerm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/server/package/etc/krill/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/server/package/usr/local/bin/krill.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/server/src/main/resources/static/92bfc085a44fac3aa756.wasm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/server/src/main/resources/static/ComposeApp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/server/src/main/resources/static/ComposeApp.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/pi/HeaderModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/composeApp/KrillKontrol.composeApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/composeApp/KrillKontrol.composeApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/androidMain/kotlin/org/example/project/MainAndroidViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/androidMain/kotlin/org/example/project/MainAndroidViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/commonMain/kotlin/io/github/bsautner/krill/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/commonMain/kotlin/io/github/bsautner/krill/App.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/wasmJsMain/resources/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/wasmJsMain/resources/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/composeApp/src/commonMain/kotlin/io/github/bsautner/krill/pi/PiHeaderView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/composeApp/src/commonMain/kotlin/io/github/bsautner/krill/pi/PiHeaderView.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KrillKontrol/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/server/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/server/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/server/src/main/kotlin/io/github/bsautner/krill/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/server/src/main/kotlin/io/github/bsautner/krill/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/server/src/main/kotlin/io/github/bsautner/krill/pi/PiManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/server/src/main/kotlin/io/github/bsautner/krill/pi/PiManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/server/src/main/resources/static/5889a08f63293351c03e.wasm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/server/src/main/resources/static/composeApp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/server/src/main/resources/static/composeApp.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/server/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/server/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/client/KrillClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/client/KrillClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/client/KtorClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/client/KtorClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/client/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/client/MainViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/di/KrillModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/di/KrillModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/pi/HeaderModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/KrillKontrol/shared/src/commonMain/kotlin/io/github/bsautner/krill/pi/HeaderModel.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +177,7 @@
       <recent name="io.bsautner.github.krill.client.ktorclient" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.KrillKontrol [wasmJsBrowserDevelopmentRun]">
+  <component name="RunManager" selected="Android App.MainActivity">
     <configuration name="KrillKontrol.composeApp" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="KrillKontrol.composeApp" />
       <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
@@ -575,10 +550,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Android App.MainActivity" />
         <item itemvalue="Gradle.KrillKontrol [wasmJsBrowserDevelopmentRun]" />
         <item itemvalue="Gradle.KrillKontrol [wasmJsBrowserDistribution]" />
         <item itemvalue="Gradle.main [desktop]" />
-        <item itemvalue="Android App.MainActivity" />
         <item itemvalue="Gradle.KrillKontrol:server [assembleShadowDist]" />
       </list>
     </recent_temporary>
@@ -662,7 +637,7 @@
       <workItem from="1750265777516" duration="1769000" />
       <workItem from="1750267556201" duration="3042000" />
       <workItem from="1750421454725" duration="6404000" />
-      <workItem from="1750429650117" duration="15381000" />
+      <workItem from="1750429650117" duration="16222000" />
     </task>
     <servers />
   </component>

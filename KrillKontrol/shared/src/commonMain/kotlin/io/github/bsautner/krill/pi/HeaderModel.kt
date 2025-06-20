@@ -13,7 +13,7 @@ data class GpioPin(
 )
 
 
-val headerJson = """
+val headerJsonAll = """
     [
       { "number": 1, "name": "3.3V", "mode": null, "state": null, "isConfigurable": false, "initialState": false },
       { "number": 2, "name": "5V", "mode": null, "state": null, "isConfigurable": false, "initialState": false },
@@ -43,6 +43,25 @@ val headerJson = """
       { "number": 26, "name": "GPIO7 (CE1)", "mode": "OUT", "state": "HIGH", "isConfigurable": true, "initialState": true },
       { "number": 27, "name": "ID_SD (EEPROM SDA)", "mode": null, "state": null, "isConfigurable": false, "initialState": false },
       { "number": 28, "name": "ID_SC (EEPROM SCL)", "mode": null, "state": null, "isConfigurable": false, "initialState": false },
+      { "number": 29, "name": "GPIO5", "mode": "OUT", "state": "LOW", "isConfigurable": true, "initialState": false },
+      { "number": 30, "name": "GND", "mode": null, "state": null, "isConfigurable": false, "initialState": false },
+      { "number": 31, "name": "GPIO6", "mode": "IN", "state": "HIGH", "isConfigurable": true, "initialState": false },
+      { "number": 32, "name": "GPIO12", "mode": "OUT", "state": "LOW", "isConfigurable": true, "initialState": false },
+      { "number": 33, "name": "GPIO13", "mode": "OUT", "state": "HIGH", "isConfigurable": true, "initialState": true },
+      { "number": 34, "name": "GND", "mode": null, "state": null, "isConfigurable": false, "initialState": false },
+      { "number": 35, "name": "GPIO19", "mode": "IN", "state": "LOW", "isConfigurable": true, "initialState": false },
+      { "number": 36, "name": "BCM16", "mode": "OUT", "state": "HIGH", "isConfigurable": true, "initialState": true },
+      { "number": 37, "name": "GPIO26", "mode": "OUT", "state": "LOW", "isConfigurable": true, "initialState": false },
+      { "number": 38, "name": "GPIO20", "mode": "IN", "state": "HIGH", "isConfigurable": true, "initialState": false },
+      { "number": 39, "name": "GND", "mode": null, "state": null, "isConfigurable": false, "initialState": false },
+      { "number": 40, "name": "GPIO21", "mode": "OUT", "state": "HIGH", "isConfigurable": true, "initialState": true }
+    ]
+
+""".trimIndent()
+
+
+val headerJson = """
+    [
       { "number": 29, "name": "GPIO5", "mode": "OUT", "state": "LOW", "isConfigurable": true, "initialState": false },
       { "number": 30, "name": "GND", "mode": null, "state": null, "isConfigurable": false, "initialState": false },
       { "number": 31, "name": "GPIO6", "mode": "IN", "state": "HIGH", "isConfigurable": true, "initialState": false },

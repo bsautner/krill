@@ -43,12 +43,12 @@ fun GpioPinView(pin: GpioPin) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
-            .padding(4.dp)
+            .padding(2.dp)
             .width(48.dp)
     ) {
         Box(
             modifier = Modifier
-                .size(24.dp)
+                .size(14.dp)
                 .clip(CircleShape)
                 .background(
                     if (!pin.isConfigurable) Color.Gray
@@ -75,13 +75,13 @@ fun GpioPinView(pin: GpioPin) {
 
 @Composable
 fun RaspberryPiHeader(pins: List<GpioPin>) {
-    Row(modifier = Modifier.padding(18.dp)) {
+    Row(modifier = Modifier.padding(8.dp)) {
         Column {
             pins.filterIndexed { index, _ -> index % 2 == 0 }.forEach { pin ->
                 GpioPinView(pin)
             }
         }
-        Spacer(modifier = Modifier.width(18.dp))
+        Spacer(modifier = Modifier.width(2.dp))
         Column {
             pins.filterIndexed { index, _ -> index % 2 == 1 }.forEach { pin ->
                 GpioPinView(pin)
