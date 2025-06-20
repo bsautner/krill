@@ -3,6 +3,7 @@ package io.github.bsautner.krill.client
 import io.ktor.client.*
 import io.ktor.client.engine.*
 import io.ktor.client.plugins.contentnegotiation.*
+import io.ktor.client.plugins.websocket.*
 import io.ktor.serialization.kotlinx.json.*
 
 object KtorClient {
@@ -12,6 +13,9 @@ object KtorClient {
     fun <T : HttpClientEngineConfig> getInstance(engine:  HttpClientEngineFactory<T> ): HttpClient {
         if (!::c.isInitialized) {
             c = HttpClient(engine) {
+
+                install(WebSockets)
+
                 install(ContentNegotiation) {
                     json(myJson)
                 }
@@ -19,5 +23,6 @@ object KtorClient {
         }
         return c
     }
+
 
 }

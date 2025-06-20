@@ -17,10 +17,11 @@ kotlin = "2.1.21"
 kotlinx-coroutines = "1.10.2"
 ktor = "3.1.3"
 logback = "1.5.18"
-serialization = "2.0.21"
+serialization = "2.1.10"
 kotlinxSerializationJSON = "1.8.1"
 pi4j = "3.0.1"
 koin = "4.1.0"
+shadow = "9.0.0-beta17"
 [libraries]
 
 
@@ -31,6 +32,10 @@ pi4j-plugin-gpiod = { group = "com.pi4j", name = "pi4j-plugin-gpiod", version.re
 koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin"}
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin"}
 koin-android-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin"}
+koin-ktor = { group = "io.insert-koin", name = "koin-ktor", version.ref = "koin"}
+koin-logger = { group = "io.insert-koin", name = "koin-logger-slf4j", version.ref = "koin"}
+#implementation("io.insert-koin:koin-ktor:3.5.6")
+#implementation("io.insert-koin:koin-logger-slf4j:3.5.6")
 
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
@@ -46,11 +51,11 @@ androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", nam
 androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
 kotlinx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
-
+kotlinx-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "compose-multiplatform"}
 
 logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 
-
+ktor-server-websockets = { module = "io.ktor:ktor-server-websockets", version.ref = "ktor" }
 ktor-server-core = { module = "io.ktor:ktor-server-core-jvm", version.ref = "ktor" }
 ktor-server-netty = { module = "io.ktor:ktor-server-netty-jvm", version.ref = "ktor" }
 ktor-server-resources = { group = "io.ktor", name = "ktor-server-resources", version.ref = "ktor" }
@@ -71,7 +76,7 @@ ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "
 ktor-client-js = { group = "io.ktor", name = "ktor-client-js", version.ref = "ktor" }
 ktor-client-darwin = { group = "io.ktor", name = "ktor-client-darwin", version.ref = "ktor" }
 ktor-server-tests = { module = "io.ktor:ktor-server-tests-jvm", version.ref = "ktor" }
-
+ktor-client-websockets = { group = "io.ktor", name = "ktor-client-websockets" , version.ref = "ktor" }
 kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJSON" }
 
 
@@ -84,13 +89,16 @@ kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 ktor = { id = "io.ktor.plugin", version.ref = "ktor" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serialization"}
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow"}
+
 
 [bundles]
-ktorServer = ["ktor-server-netty", "kotlinx-serialization", "ktor-server-core", "ktor-server-resources", "ktor-json", "ktor-server-content-negotiation", "ktor-common",  "ktor-server-cors"]
-ktorClient = ["ktor-client-core", "kotlinx-serialization", "ktor-json", "ktor-client-content-negotiation"]
+ktorServer = ["ktor-server-websockets","ktor-server-netty", "kotlinx-serialization", "ktor-server-core", "ktor-server-resources", "ktor-json", "ktor-server-content-negotiation", "ktor-common",  "ktor-server-cors"]
+ktorClient = ["ktor-client-websockets", "ktor-client-core", "kotlinx-serialization", "ktor-json", "ktor-client-content-negotiation"]
 ktorClientJs = ["ktor-client-js"]
 ktorClientJvm = ["ktor-client-cio"]
 ktorClientAndroid = ["ktor-client-android"]
 pi4j = ["pi4j-core", "pi4j-plugin-raspberrypi", "pi4j-plugin-gpiod"]
 koin = ["koin-core"]
 koin-android = ["koin-android-compose"]
+koin-ktor = ["koin-core", "koin-ktor", "koin-logger"]

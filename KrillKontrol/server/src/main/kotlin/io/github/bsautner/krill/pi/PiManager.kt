@@ -4,6 +4,7 @@ import com.pi4j.Pi4J
 import com.pi4j.context.Context
 import com.pi4j.io.gpio.digital.DigitalOutput
 import com.pi4j.io.gpio.digital.DigitalState
+import io.github.bsautner.krill.client.myJson
 
 class PiManager(private val pcp: PiContextProvider) {
 
@@ -20,6 +21,14 @@ class PiManager(private val pcp: PiContextProvider) {
 
     }
 
+    fun getPin() : DigitalOutput {
+        return pcp.getPin()
+    }
+
+    fun getPins() : List<GpioPin> {
+        return pcp.getPins()
+    }
+
 }
 
 
@@ -27,13 +36,26 @@ class PiManager(private val pcp: PiContextProvider) {
 class PiContextProvider  {
     private lateinit var pi : Context
     private lateinit var bcm16: DigitalOutput
+    private lateinit var gpioHeader : List<GpioPin>
 
     init {
         if (! ::pi.isInitialized) {
             pi = Pi4J.newAutoContext()
+            gpioHeader = myJson.decodeFromString(headerJson)
         }
     }
 
+    fun getPins() : List<GpioPin> {
+
+        val reg = pi.registry().allByType(DigitalOutput::class.java)
+
+        println("getPins ${reg.size}")
+
+        val pin = getPin()
+        pin.addListener()
+        println(pin.state())
+        return gpioHeader
+    }
 
     fun getPin() : DigitalOutput {
         if (! ::bcm16.isInitialized) {
@@ -49,5 +71,6 @@ class PiContextProvider  {
         return bcm16
 
     }
+
 
 }

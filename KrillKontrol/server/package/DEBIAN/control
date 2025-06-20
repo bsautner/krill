@@ -1,0 +1,9 @@
+Package: krill
+Version: 0.0.1-0
+Section: utils
+Priority: optional
+Architecture: all
+Depends: openjdk-21-jdk, openssl
+Maintainer: Benjamin Sautner <bsautner@gmail.com>
+Description: Krill Server for Raspberry Pi
+ Krill provides an interface to control and automate your world with Raspberry Pi

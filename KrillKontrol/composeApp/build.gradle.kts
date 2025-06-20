@@ -70,7 +70,7 @@ kotlin {
 
         val commonMain by getting {
             dependencies {
-
+//                implementation(compose.uiTooling)
                 implementation(compose.runtime)
                 implementation(compose.foundation)
                 implementation(compose.material)

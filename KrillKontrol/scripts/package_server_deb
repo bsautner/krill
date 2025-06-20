@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+
+
+DIST_DIR="./composeApp/build/dist/wasmJs/productionExecutable"
+STATIC_DIR="./server/src/main/resources/static"
+RES_DIR="./server/src/main/resources"
+TEMP_DIR="$RES_DIR/productionExecutable"
+
+cd ..
+
+./gradlew clean kotlinUpgradeYarnLock :composeApp:wasmJsBrowserDistribution :server:shadowJar
+
+rm -rf $STATIC_DIR
+cp -rv $DIST_DIR $RES_DIR
+mv -v $TEMP_DIR $STATIC_DIR
+rm -f ./server/package/usr/local/bin/*
+
+chmod 755 ./server/package/DEBIAN/postinst
+chmod 755 ./server/package/DEBIAN/postrm
+chmod 755 ./server/package/DEBIAN/prerm
+
+
+cp -v ./server/build/libs/server-all.jar ./server/package/usr/local/bin/krill.jar
+dpkg-deb  --build ./server/package

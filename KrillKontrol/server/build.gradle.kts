@@ -1,14 +1,14 @@
 plugins {
     alias(libs.plugins.kotlinJvm)
     alias(libs.plugins.ktor)
-
+    alias(libs.plugins.shadow)
     application
 }
 
-group = "org.example.project"
+group = "io.github.bsautner.krill"
 version = "1.0.0"
 application {
-    mainClass.set("org.example.project.ApplicationKt")
+    mainClass.set("io.github.bsautner.kril.ApplicationKt")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=${extra["io.ktor.development"] ?: "false"}")
 }
 kotlin {
@@ -27,9 +27,8 @@ dependencies {
     implementation(libs.logback)
     implementation(libs.bundles.ktorServer)
     implementation(libs.bundles.pi4j)
-    implementation(libs.bundles.koin)
-    implementation("io.insert-koin:koin-ktor:3.5.6")
-    implementation("io.insert-koin:koin-logger-slf4j:3.5.6")
+    implementation(libs.bundles.koin.ktor)
+
 
     testImplementation(libs.kotlin.test.junit)
     testImplementation(kotlin("test"))

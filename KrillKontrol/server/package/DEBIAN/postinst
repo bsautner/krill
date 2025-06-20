@@ -1,0 +1,66 @@
+#!/bin/sh
+
+set -e
+
+export DEBIAN_FRONTEND=noninteractive
+
+ 
+if ! getent group krill >/dev/null; then
+    addgroup --system krill
+fi
+
+if ! id -u krill >/dev/null 2>&1; then
+    adduser --system --ingroup krill --no-create-home --disabled-login krill
+fi
+
+# Create necessary directories with appropriate permissions
+install -d -o krill -g krill -m 0750 /var/log/krill
+install -d -o krill -g krill -m 0750 /var/lib/krill/db
+install -d -o krill -g krill -m 0750 /var/lib/krill/obj
+install -d -o krill -g krill -m 0750 /etc/krill
+install -d -o krill -g krill -m 0750 /usr/share/krill
+
+
+# Create keystore password if it doesn't exist
+if [ ! -f "/etc/krill/keystore.password" ]; then
+    echo "Creating keystore password..."
+    KEYSTORE_PASSWORD=$(openssl rand -base64 32)
+    echo "$KEYSTORE_PASSWORD" > /etc/krill/keystore.password
+    chown krill:krill /etc/krill/keystore.password
+    chmod 600 /etc/krill/keystore.password
+fi
+
+# Create systemd service file
+cat > /etc/systemd/system/krill.service << EOF
+[Unit]
+Description=krill
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/java -jar /usr/local/bin/krill.jar
+User=krill
+Group=krill
+Restart=on-failure
+Environment=JAVA_OPTS=
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Reload systemd, enable and start krill service
+systemctl daemon-reload
+systemctl enable krill.service
+systemctl restart krill.service
+
+# Create a wrapper script to run the program from the command line
+cat > /usr/local/bin/krill << 'EOF'
+#!/bin/sh
+# Forward any command line arguments to the Java program
+exec /usr/bin/java -jar /usr/local/bin/krill.jar "$@"
+EOF
+
+# Make the wrapper script executable
+chmod +x /usr/local/bin/krill
+
+echo "Post-installation steps completed."
