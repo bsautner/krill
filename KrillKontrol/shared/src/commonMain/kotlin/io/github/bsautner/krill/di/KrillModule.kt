@@ -1,6 +1,6 @@
 package io.github.bsautner.krill.di
 
-import io.github.bsautner.krill.client.DefaultKrillClient
+import io.github.bsautner.krill.client.KrillKtorClient
 import io.github.bsautner.krill.client.KrillOperations
 import io.github.bsautner.krill.client.MainViewModel
 import io.github.bsautner.krill.client.getHttpClient
@@ -12,7 +12,7 @@ import org.koin.dsl.module
 
 val krillModule = module {
     single<HttpClient>  { getHttpClient().client }
-    single { DefaultKrillClient(get()) }
+    single { KrillKtorClient(get()) }
     single<KrillOperations> { MainViewModel(get()) }
 
 }

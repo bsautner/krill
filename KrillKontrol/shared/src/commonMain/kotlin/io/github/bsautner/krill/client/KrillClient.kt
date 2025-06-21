@@ -2,6 +2,7 @@ package io.github.bsautner.krill.client
 
 import io.github.bsautner.krill.pi.GpioPin
 import io.ktor.client.*
+import io.ktor.client.call.*
 import io.ktor.client.plugins.websocket.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
@@ -13,16 +14,25 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
 
-class DefaultKrillClient(private val client: HttpClient)   {
+class KrillKtorClient(private val client: HttpClient)   {
+
     private val host = "pi-krill.local"
     private var session: WebSocketSession? = null
     private var listenJob: Job? = null
 
-    suspend fun testGet() :String {
-        val response: HttpResponse = client.request("http://$host:8080/test") {
-            method = HttpMethod.Get
+    suspend fun updatePin(pin: GpioPin) {
+
+        client.request("http://$host:8080/pin") {
+            method = HttpMethod.Post
+            contentType(ContentType.Application.Json)
+            setBody(pin)
         }
-        return response.bodyAsText()
+
+    }
+
+    suspend fun getHeader() : List<GpioPin> {
+        val response: HttpResponse = client.request("http://$host:8080/header") {}
+        return response.body()
     }
 
      fun start(callback : suspend (GpioPin) -> Unit) {

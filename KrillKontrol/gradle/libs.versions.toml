@@ -11,7 +11,7 @@ androidx-espresso-core = "3.6.1"
 androidx-lifecycle = "2.9.0"
 androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
-compose-multiplatform = "1.8.1"
+compose-multiplatform = "1.9.0-alpha02"
 junit = "4.13.2"
 kotlin = "2.1.21"
 kotlinx-coroutines = "1.10.2"
@@ -22,8 +22,9 @@ kotlinxSerializationJSON = "1.8.1"
 pi4j = "3.0.1"
 koin = "4.1.0"
 shadow = "9.0.0-beta17"
-[libraries]
 
+
+[libraries]
 
 pi4j-core = { group = "com.pi4j", name = "pi4j-core", version.ref = "pi4j" }
 pi4j-plugin-raspberrypi = { group = "com.pi4j", name = "pi4j-plugin-raspberrypi", version.ref = "pi4j" }
@@ -34,8 +35,6 @@ koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = 
 koin-android-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin"}
 koin-ktor = { group = "io.insert-koin", name = "koin-ktor", version.ref = "koin"}
 koin-logger = { group = "io.insert-koin", name = "koin-logger-slf4j", version.ref = "koin"}
-#implementation("io.insert-koin:koin-ktor:3.5.6")
-#implementation("io.insert-koin:koin-logger-slf4j:3.5.6")
 
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
